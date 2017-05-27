@@ -4,14 +4,14 @@
     Author     : Parin Patel
 --%>
 
-<%@page import="java.util.Scanner"%>
-<%@page import="java.io.File"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
-
+<%@page import="java.util.Scanner"%>
+<%@page import="java.io.File"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,29 +42,35 @@
             String TagLine = null, Imagename = null;
             String City = "Surat";
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/Orbopedia", "root", "h4ck3d321");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12176798", "sql12176798", "2lYkxDf2K6");
+
+            //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/Orbopedia", "root", "h4ck3d321");
+
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from places where PlaceName='" + City + "'");
+            ResultSet rs = stmt.executeQuery("Select * from places where PlaceName='" + City + "';");
             while (rs.next()) {
                 PID = rs.getInt("PID");
             }
-            rs.close();
-            ResultSet rs2 = stmt.executeQuery("Select * from PlaceData where PID=" + PID + "");
+            
+            ResultSet rs2 = stmt.executeQuery("Select * from placedata where PID=" + PID + ";");
             while (rs2.next()) {
                 TagLine = rs2.getString("TagLine");
                 Imagename = rs2.getString("CoverImage");
             }
-            rs2.close();
-            ResultSet rs3 = stmt.executeQuery("Select Location from metadata where Name='PlaceImages'");
+            
+            ResultSet rs3 = stmt.executeQuery("Select Location from metadata where Name='PlaceImages';");
             while (rs3.next()) {
                 String location = rs3.getString("Location");
             }
-            rs3.close();
+            
             String Location = null;
-            ResultSet rs4 = stmt.executeQuery("Select * from MetaData where Name = 'PlaceAboutText';");
+            ResultSet rs4 = stmt.executeQuery("Select * from metadata where Name = 'PlaceAboutText';");
             while (rs4.next()) {
                 Location = rs4.getString("Location");
             }
+            rs.close();
+            rs2.close();
+            rs3.close();
             rs4.close();
             stmt.close();
             conn.close();
