@@ -315,7 +315,7 @@
             <div class="container">
                 <div class="row">
                     <div class="w3-black scroll45 onTopView" data-spy="affix" data-offset-top="680">
-                        <a href="#" class="w3-bar-item w3-button">Surat</a>
+                        <a href="#" class="w3-bar-item w3-button"><%=City%></a>
                         <input type="find" placeholder="search">
                         <a href="#" class="w3-bar-item w3-button">Link 1</a>
                         <a href="#" class="w3-bar-item w3-button">Link 2</a>
