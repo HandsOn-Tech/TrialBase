@@ -399,7 +399,6 @@
         </script>
 
 
-        <!--i think it's not needed anymore
         <div id="modal01" class="w3-modal" onclick="this.style.display = 'none'">
             <img class="w3-modal-content center-block ModalMDL" id="img01">
         </div>
@@ -409,7 +408,7 @@
                 document.getElementById("img01").src = element.src;
                 document.getElementById("modal01").style.display = "block";
             }
-        </script>-->
+        </script>
 
 
         <!-- Callout -->

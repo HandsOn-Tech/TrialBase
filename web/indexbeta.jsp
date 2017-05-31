@@ -113,7 +113,7 @@
                 }
                  input[type=search]:focus {
                     border:solid 1px teal;
-                    width: 55px;
+                    width: 120px;
                     padding-left: 32px;
                     color: #fff;
                     background-color: teal;
@@ -186,10 +186,10 @@
             .ModalMDL{
 
             }
-            #imgs{
+            /*#imgs{
                 width:300px;
                 height:300px;
-            }
+            }*/
             @media screen and(max-width: 450px){
                 .ModalMDL{
                     width: 70%;
@@ -198,6 +198,7 @@
             }
             .mySlides {display:none}
             .demo {cursor:pointer}
+            /*.popimg{max-width:100%}*/
         </style>
         
     </head>
@@ -253,9 +254,9 @@
                         }*/
                     %>
                 </div>
-            </div>-->
+            </div>
             <div class="w3-content" style="max-width:600px; padding-top: -100px;">
-                <img class="mySlides w3-animate-right w3-card-4" src="img/portfolio-1.jpg" style="width:100%">
+                <img class="mySlides w3-animate-right w3-card-4" onclick="onClick(this)" src="img/portfolio-1.jpg" style="width:100%">
                 <img class="mySlides w3-animate-right w3-card-4" src="img/portfolio-2.jpg" style="width:100%">
                 <img class="mySlides w3-animate-right w3-card-4" src="img/portfolio-3.jpg" style="width:100%">
             </div>
@@ -270,13 +271,54 @@
                     <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(2)" src="img/portfolio-2.jpg" style="width:100px;">
                     <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(3)" src="img/portfolio-3.jpg" style="width:100px;">
                 </div>
-            </div>
-        </section>
-        
+                <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" width="1500" height="500" class="popimg">
+                    </div>
+                </div>
+            </div>-->
+                    <div class="w3-content w3-display-container">
 
-        
-        
+<div class="w3-display-container mySlides">
+  <img id="image1" class="w3-animate-fading" src="img/portfolio-1.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img/portfolio-2.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img/portfolio-3.jpg" style="width:100%">
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+        </section>
+
         <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+        
+        <!--<script>
             var slideIndex = 1;
             showDivs(slideIndex);
 
@@ -304,6 +346,12 @@ function showDivs(n) {
   dots[slideIndex-1].className += " w3-red";
 }
 </script>
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>-->
         
     </body>
 </html>

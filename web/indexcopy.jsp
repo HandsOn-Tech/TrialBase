@@ -34,10 +34,6 @@
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
-	<script type="text/javascript" src="materialize/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-
 
 
         <%
@@ -220,7 +216,7 @@
                 }
                 input[type=search]:focus {
                     border:solid 0px black;
-                    width: 90px;
+                    width: 120px;
                     padding-left: 32px;
                     color: #fff;
                     background-color: teal;
@@ -228,7 +224,7 @@
                 }
                 input[type=find]:focus {
                     border:solid 0px black;
-                    width: 90px;
+                    width: 120px;
                     padding-left: 32px;
                     color: #fff;
                     background-color: teal;
@@ -247,7 +243,10 @@
                     height: 85%;
                 }
             }
-
+            #vid {
+                max-width: 100%;
+                /*max-height:auto;*/
+            }
         </Style>
 
 
@@ -373,6 +372,10 @@
                     <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(2)" src="img/portfolio-2.jpg" style="width:100px;">
                     <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(3)" src="img/portfolio-3.jpg" style="width:100px;">
                 </div>
+            </div>
+
+            <div class="col-6 col-s-9">
+                <iframe id="vid" width="1500" height="450px" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
         <script>
