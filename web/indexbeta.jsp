@@ -278,7 +278,7 @@
                     </div>
                 </div>
             </div>-->
-                    <div class="w3-content w3-display-container">
+<div class="w3-content w3-display-container">
 
 <div class="w3-display-container mySlides">
   <img id="image1" class="w3-animate-fading" src="img/portfolio-1.jpg" style="width:100%">

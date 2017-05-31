@@ -356,53 +356,48 @@
                 </div>
             </div>-->
                 &nbsp;&nbsp;&nbsp;
-            <div class="w3-content" style="max-width:600px; padding-top: -100px;">
-                <img class="mySlides w3-animate-bottom w3-card-4" src="img/portfolio-1.jpg" style="width:100%">
-                <img class="mySlides w3-animate-bottom w3-card-4" src="img/portfolio-2.jpg" style="width:100%">
-                <img class="mySlides w3-animate-bottom w3-card-4" src="img/portfolio-3.jpg" style="width:100%">
-            </div>
+            <div class="w3-content w3-display-container">
 
-            <div class="w3-center">
-                <div class="w3-section">
-                    <button class="w3-button w3-round w3-teal w3-large w3-round- w3-hover-green w3-card-4 w3-border-0" onclick="plusDivs(-1)">Prev</button>&nbsp;
-                    <button class="w3-button w3-round w3-teal w3-large w3-round- w3-hover-green w3-card-4 w3-border-0" onclick="plusDivs(1)">Next</button>
-                </div>
-                <div class="w3-black scroll45 w3-padding">
-                    <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(1)" src="img/portfolio-1.jpg" style="width:100px;">
-                    <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(2)" src="img/portfolio-2.jpg" style="width:100px;">
-                    <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(3)" src="img/portfolio-3.jpg" style="width:100px;">
-                </div>
-            </div>
+<div class="w3-display-container mySlides">
+  <img src="img/portfolio-1.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img/portfolio-2.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img/portfolio-3.jpg" style="width:100%">
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div><br/>
 
             <div class="col-6 col-s-9">
                 <iframe id="vid" width="1500" height="450px" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
         <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
-            function plusDivs(n) {
-                showDivs(slideIndex += n);
-            }
-            function currentDiv(n) {
-                showDivs(slideIndex = n);
-            }
-            function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("demo");
-                if (n > x.length) {slideIndex = 1;}    
-                if (n < 1) {slideIndex = x.length;}
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" w3-red", "");
-                }
-                x[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " w3-red";
-            }
-        </script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 
         <!--i think it's not needed anymore
