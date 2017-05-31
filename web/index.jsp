@@ -40,7 +40,7 @@
         <%
             int PID = 0;
             String TagLine = null, Imagename = null;
-            String City = "Surat";
+            String City = "Ahmedabad";
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12176798", "sql12176798", "2lYkxDf2K6");
 
@@ -146,6 +146,97 @@
             .ModalMDL{
 
             }
+            input {
+                    outline: none;
+                }
+                input[type=search] {
+                    -webkit-appearance: textfield;
+                    -webkit-box-sizing: content-box;
+                    font-family: inherit;
+                    font-size: 100%;
+                }
+                input[type=find]{
+                    -webkit-appearance: textfield;
+                    -webkit-box-sizing: content-box;
+                    font-family: inherit;
+                    font-size: 100%;
+                }
+                input::-webkit-search-decoration,
+                    input::-webkit-search-cancel-button {
+                    display: none; 
+                }
+                input[type=search] {
+                    background: #ededed url("searchicon.png") no-repeat 9px center;
+                    margin-top:4px;
+                    background-size: 20px;
+                    border: solid 0px #000;
+                    padding: 5px 10px 5px 32px;
+                    width: 55px;
+                    -webkit-border-radius: 0em;
+                    -moz-border-radius: 0em;
+                    border-radius: 0em;
+                    -webkit-transition: all .3s;
+                    -moz-transition: all .3s;
+                    transition: all .3s;
+                }
+                input[type=find]{
+                    background:#ededed url("searchicon.png") no-repeat 9px center;
+                    margin-top:4px;
+                    margin-left:5px;
+                    background-size: 20px;
+                    border:solid 0px #000;
+                    padding:5px 10px 5px 32px;
+                    width:55px;
+                    -webkit-border-radius: 10em;
+                    -moz-border-radius: 10em;
+                    border-radius: 10em;
+                    -webkit-transition: all .3s;
+                    -moz-transition: all .3s;
+                    transition: all .3s;
+                }
+                input[type=search] {
+                    background-color: black;
+                    width: 20px;
+                    float:right;
+                    padding-left: 10px;
+                    color: transparent;
+                    cursor: pointer;
+                }
+                input[type=find]{
+                    background-color: black;
+                    width: 20px;
+                    padding-left: 10px;
+                    color: transparent;
+                    cursor: pointer;
+                }
+                input[type=search]:hover {
+                    background-color: black;
+                }
+                input[type=find]:hover {
+                    background-color: black;
+                }
+                input[type=search]:focus {
+                    border:solid 0px black;
+                    width: 90px;
+                    padding-left: 32px;
+                    color: #fff;
+                    background-color: teal;
+                    cursor: auto;
+                }
+                input[type=find]:focus {
+                    border:solid 0px black;
+                    width: 90px;
+                    padding-left: 32px;
+                    color: #fff;
+                    background-color: teal;
+                    cursor: auto;
+                }
+                input:-moz-placeholder {
+                    color: transparent;
+                }
+                input::-webkit-input-placeholder {
+                    color: transparent;
+                }
 
             @media screen and(max-width: 450px){
                 .ModalMDL{
@@ -160,7 +251,7 @@
     </head>
 
     <body>
-        <div class="w3-black scroll45 onTopView" >
+        <!--<div class="w3-black scroll45 onTopView" >
             <a href="#" class="w3-bar-item w3-button">Orbopedia </a>
             <a href="#" class="w3-bar-item w3-button">Home</a>
             <a href="#" class="w3-bar-item w3-button">Link 1</a>
@@ -171,9 +262,42 @@
             <a href="#" class="w3-bar-item w3-button">Link 3</a>
             <a href="#" class="w3-bar-item w3-button">Link 3</a>
             <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>-->
+        <div class="w3-container w3-black w3-padding">
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Orbopedia </a>
+            <a href="#" class="w3-bar-item w3-button">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
+            <button onclick="myFunction()" id="expand1" class="w3-btn w3-ripple w3-teal w3-hide-large w3-right">+</button>
+            <input type="search" placeholder="search">
         </div>
-
-
+        <div id="block" class="w3-animate-right w3-center w3-bar-block w3-teal w3-hide w3-hide-large">
+            <a href="#" class="w3-bar-item w3-button">Orbopedia </a>
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("block");
+                if (x.className.indexOf("w3-show") === -1) {
+                    x.className += " w3-show";
+                } else { 
+                x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
 
 
         <!-- Header -->
@@ -192,6 +316,7 @@
                 <div class="row">
                     <div class="w3-black scroll45 onTopView" data-spy="affix" data-offset-top="680">
                         <a href="#" class="w3-bar-item w3-button">Surat</a>
+                        <input type="find" placeholder="search">
                         <a href="#" class="w3-bar-item w3-button">Link 1</a>
                         <a href="#" class="w3-bar-item w3-button">Link 2</a>
                         <a href="#" class="w3-bar-item w3-button">Link 3</a>
@@ -216,62 +341,65 @@
         <!-- Services -->
         <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
         <section id="services" class="services bg-primary">
-            <div class="container">
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" href="#collapse1">About <%=City%></a>
-                            </h4>
-                        </div>
-                        <div id="collapse1" class="panel-collapse collapse">
-                            <div class="panel-body" style="color: black;">
-                                <%
+            <!--<div class="w3-bar w3-card-4 w3-black" style="padding-bottom:55px">
+                <div class="w3-bar-item w3-center">
+                    <%
 
-                                    File path = new File(Location + PID + ".TRP");
-                                    Scanner aboutUs = new Scanner(path);
-                                    while (aboutUs.hasNext()) {
-                                        out.println(aboutUs.next());
-                                    }
-                                %>
-                            </div>
-                        </div>
-                    </div>  
-                </div> 
+                        /*File path = new File(Location + PID + ".TRP");
+                        Scanner aboutUs = new Scanner(path);
+                        while (aboutUs.hasNext()) {
+                        out.println(aboutUs.next());
+                        }*/
+                    %>
+                </div>
+            </div>-->
+                &nbsp;&nbsp;&nbsp;
+            <div class="w3-content" style="max-width:600px; padding-top: -100px;">
+                <img class="mySlides w3-animate-bottom w3-card-4" src="img/portfolio-1.jpg" style="width:100%">
+                <img class="mySlides w3-animate-bottom w3-card-4" src="img/portfolio-2.jpg" style="width:100%">
+                <img class="mySlides w3-animate-bottom w3-card-4" src="img/portfolio-3.jpg" style="width:100%">
+            </div>
 
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" href="#collapse2">About <%=City%></a>
-                            </h4>
-                        </div>
-                        <div id="collapse2" class="panel-collapse collapse">
-                            <div class="panel-body" style="color: black;">
-                                <div class="w3-row-padding">
-                                    <div class="w3-container w3-third">
-                                        <img src="img/portfolio-1.jpg" class="ImageLook" onclick="onClick(this)">
-                                    </div>
-                                    <div class="w3-container w3-third">
-                                        <img src="img/portfolio-2.jpg" class="ImageLook" onclick="onClick(this)">
-                                    </div>
-                                    <div class="w3-container w3-third">
-                                        <img src="img/portfolio-3.jpg" class="ImageLook" onclick="onClick(this)">
-                                    </div>
-                                    <div class="w3-container w3-third">
-                                        <img src="img/portfolio-3.jpg" class="ImageLook" onclick="onClick(this)">
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div> 
-                    </div>
+            <div class="w3-center">
+                <div class="w3-section">
+                    <button class="w3-button w3-round w3-teal w3-large w3-round- w3-hover-green w3-card-4 w3-border-0" onclick="plusDivs(-1)">Prev</button>&nbsp;
+                    <button class="w3-button w3-round w3-teal w3-large w3-round- w3-hover-green w3-card-4 w3-border-0" onclick="plusDivs(1)">Next</button>
+                </div>
+                <div class="w3-black scroll45 w3-padding">
+                    <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(1)" src="img/portfolio-1.jpg" style="width:100px;">
+                    <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(2)" src="img/portfolio-2.jpg" style="width:100px;">
+                    <img class="w3-bar-item w3-button w3-card-4" onclick="currentDiv(3)" src="img/portfolio-3.jpg" style="width:100px;">
                 </div>
             </div>
-            <!-- /.container -->
         </section>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1;}    
+                if (n < 1) {slideIndex = x.length;}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-red", "");
+                }
+                x[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " w3-red";
+            }
+        </script>
 
 
-
+        <!--i think it's not needed anymore
         <div id="modal01" class="w3-modal" onclick="this.style.display = 'none'">
             <img class="w3-modal-content center-block ModalMDL" id="img01">
         </div>
@@ -281,7 +409,7 @@
                 document.getElementById("img01").src = element.src;
                 document.getElementById("modal01").style.display = "block";
             }
-        </script>
+        </script>-->
 
 
         <!-- Callout -->
@@ -460,7 +588,7 @@
                 that.on('click', onMapClickHandler);
                 that.off('mouseleave', onMapMouseleaveHandler);
                 that.find('iframe').css("pointer-events", "none");
-            }
+            };
             var onMapClickHandler = function (event) {
                 var that = $(this);
                 // Disable the click handler until the user leaves the map area
@@ -469,7 +597,7 @@
                 that.find('iframe').css("pointer-events", "auto");
                 // Handle the mouse leave event
                 that.on('mouseleave', onMapMouseleaveHandler);
-            }
+            };
             // Enable map zooming with mouse scroll when the user clicks the map
             $('.map').on('click', onMapClickHandler);
         </script>
@@ -477,5 +605,3 @@
     </body>
 
 </html>
-
-
