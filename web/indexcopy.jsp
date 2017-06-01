@@ -81,7 +81,7 @@
                 System.out.println(firstName + " " + lastName);*/
         %>
 
-        <title>Orbopedia - <%=City%></title>
+        <title>IndexCopy - <%=City%></title>
 
         <style>
 
