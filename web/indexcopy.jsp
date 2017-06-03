@@ -357,47 +357,51 @@
             </div>-->
                 &nbsp;&nbsp;&nbsp;
             <div class="w3-content w3-display-container">
+                <div class="w3-display-container mySlides">
+                    <img src="img/portfolio-1.jpg" style="width:100%">
+                </div>
+                <div class="w3-display-container mySlides">
+                    <img src="img/portfolio-2.jpg" style="width:100%">
+                </div>
+                <div class="w3-display-container mySlides">
+                    <img src="img/portfolio-3.jpg" style="width:100%">
+                </div>
+                <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
 
-<div class="w3-display-container mySlides">
-  <img src="img/portfolio-1.jpg" style="width:100%">
-</div>
-
-<div class="w3-display-container mySlides">
-  <img src="img/portfolio-2.jpg" style="width:100%">
-</div>
-
-<div class="w3-display-container mySlides">
-  <img src="img/portfolio-3.jpg" style="width:100%">
-</div>
-
-<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
-
-</div><br/>
-
-            <div class="col-6 col-s-9">
-                <iframe id="vid" width="1500" height="450px" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div><br/>
+            
+            <!--<div class="col-6 col-s-9">
+                <iframe id="vid" width="1500" height="500px" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>-->
+            <div class="w3-center">
+                <div class="w3-black scroll45 w3-padding">
+                    <iframe class="w3-bar-item w3-button w3-card-4" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" style="width:500px; height: 250px;" allowfullscreen></iframe>
+                    <iframe class="w3-bar-item w3-button w3-card-4" src="//www.youtube.com/embed/gud7MD2PvrQ?rel=0" style="width:500px; height: 250px;" allowfullscreen></iframe>
+                    <iframe class="w3-bar-item w3-button w3-card-4" src="//www.youtube.com/embed/rrT6v5sOwJg?rel=0" style="width:500px; height: 250px;" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
+        <!--image script-->
         <script>
-var slideIndex = 1;
-showDivs(slideIndex);
+            var slideIndex = 1;
+            showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1;}    
+                if (n < 1) {slideIndex = x.length;}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+            }
+        </script>
 
 
         <!--i think it's not needed anymore

@@ -313,16 +313,18 @@
         </header>
 
         <!-- About -->
-        <section id="about" class="about">
+        
+        <section id="about" class="about w3-center">
+            <div class="w3-black scroll45 onTopView" data-spy="affix" data-offset-top="680">
+                <a href="#" class="w3-bar-item w3-button"><%=City%></a>
+                <input type="find" placeholder="search">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
             <div class="container">
                 <div class="row">
-                    <div class="w3-black scroll45 onTopView" data-spy="affix" data-offset-top="680">
-                        <a href="#" class="w3-bar-item w3-button"><%=City%></a>
-                        <input type="find" placeholder="search">
-                        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                    </div>
+                    
                     <iframe
                         width="100%"
                         height="550px"
@@ -485,14 +487,20 @@
         </aside>
 
         <!-- Map -->
-        <section id="contact" class="map">
-            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-            <br />
-            <small>
-                <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-            </small>
+        <section id="contact" class="map w3-row">
+            <div class="w3-col s6 w3-center w3-panel w3-border w3-border-blue">
+                <iframe width="100%" height="450px" frameborder="0"></iframe>
+            </div>
+            <div class="w3-col s6 w3-center w3-panel w3-border w3-border-blue">
+                <iframe width="100%;" height="450px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+                <br />
+                <small>
+                    <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+                </small>
+            </div>
         </section>
-
+        
+        
         <!-- Footer -->
         <footer>
             <div class="container">
