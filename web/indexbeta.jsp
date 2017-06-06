@@ -243,10 +243,9 @@
                     height: 85%;
                 }
             }
-            #vid {
-                max-width: 100%;
-                /*max-height:auto;*/
-            }
+            .mySlides{display:none}
+            .myVideos{display:none; max-height:550px;}
+            .demo{cursor:pointer}
         </Style>
 
 
@@ -358,7 +357,7 @@
                 </div>
             </div>-->
                 &nbsp;&nbsp;&nbsp;
-            <div class="w3-content w3-display-container">
+            <div class="w3-content w3-display-container"><!--w3-content-->
                 <div class="w3-display-container mySlides">
                     <img src="img/portfolio-1.jpg" style="width:100%">
                 </div>
@@ -376,14 +375,60 @@
             <!--<div class="col-6 col-s-9">
                 <iframe id="vid" width="1500" height="500px" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>-->
-            <div class="w3-center">
+            <div class="w3-display-container w3-center">
+            <div class="w3-display-container myVideos" style="width: 100%;">
+                <iframe class="w3-card-4 w3-border-0" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" style="width:100%; height:550px;" allowfullscreen></iframe>
+            </div>
+            <div class="w3-display-container myVideos" style="width: 100%;">
+                <iframe class="w3-card-4 w3-border-0" src="//www.youtube.com/embed/gud7MD2PvrQ?rel=0" style="width:100%; height:550px;" allowfullscreen></iframe>
+            </div>
+            <div class="w3-display-container myVideos" style="width: 100%;">
+                <iframe class="w3-card-4 w3-border-0" src="//www.youtube.com/embed/rrT6v5sOwJg?rel=0" style="width:100%; height:550px;" allowfullscreen></iframe>
+            </div>
+                <div class="w3-row-padding w3-section">
+                    <div class="w3-col s4">
+                        <img class="demo w3-opacity w3-hover-opacity-off" src="vid1.png" alt="vid1" style="width:100%" onclick="currentVid(1)">
+                    </div>
+                    <div class="w3-col s4">
+                        <img class="demo w3-opacity w3-hover-opacity-off" src="vid1.png" alt="vid1" style="width:100%" onclick="currentVid(2)">
+                    </div>
+                    <div class="w3-col s4">
+                        <img class="demo w3-opacity w3-hover-opacity-off" src="vid1.png" alt="vid1" style="width:100%" onclick="currentVid(3)">
+                    </div>
+                </div>
+            </div>
+            <!--<div class="w3-center">
                 <div class="w3-black scroll45 w3-padding">
                     <iframe class="w3-bar-item w3-button w3-card-4" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" style="width:500px; height: 250px;" allowfullscreen></iframe>
                     <iframe class="w3-bar-item w3-button w3-card-4" src="//www.youtube.com/embed/gud7MD2PvrQ?rel=0" style="width:500px; height: 250px;" allowfullscreen></iframe>
                     <iframe class="w3-bar-item w3-button w3-card-4" src="//www.youtube.com/embed/rrT6v5sOwJg?rel=0" style="width:500px; height: 250px;" allowfullscreen></iframe>
                 </div>
-            </div>
+            </div>-->
         </section>
+        <!--Video script-->
+        <script>
+            var vidIndex = 1;
+            showVids(vidIndex);
+        
+            function currentVid(n){
+                showVids(vidIndex = n)
+            }
+            function showVids(n){
+                var i;
+                var x = document.getElementsByClassName("myVideos");
+                var dots = document.getElementsByClassName("demo");
+                if(n > x.length) {vidIndex = 1;}
+                if(n < 1) {vidIndex = x.length;}
+                for(i = 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                }
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+                }
+                x[vidIndex-1].style.display = "block";
+                dots[vidIndex-1].className += " w3-opacity-off";
+            }
+        </script>
         <!--image script-->
         <script>
             var slideIndex = 1;
@@ -492,15 +537,24 @@
                 <iframe width="100%" height="450px" frameborder="0"></iframe>
             </div>
             <div class="w3-col s6 w3-center w3-panel w3-border w3-border-blue">
-                <iframe width="100%;" height="450px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+                <iframe width="100%" height="450px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
                 <br />
                 <small>
                     <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
                 </small>
             </div>
-        </section>
+        </section><br><br><br>
         
         
+        
+        
+        <div class="w3-container w3-teal">
+            <marquee style="padding-top:30px;" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 6, 0);" height="100px">
+                <a href="#" class="w3-button">product 1</a>
+                <a href="#" class="w3-button">product 2</a>
+                <a href="#" class="w3-button">product 3</a>
+            </marquee>
+        </div>
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -556,7 +610,7 @@
             // Scrolls to the selected menu item on the page
             $(function () {
                 $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
-                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
                         var target = $(this.hash);
                         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                         if (target.length) {
